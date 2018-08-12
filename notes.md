@@ -29,3 +29,32 @@ Cargo is Rust's build system and package manager.
 `cargo run` build and runs the project.
 
 `cargo check` checks the code but does not produce an executable.
+
+## 2 Prgramming guessing game
+
+```rust
+use std::io;
+
+fn main() {
+    println!("Guess the number!");
+
+    println!("Please input your guess.");
+
+    let mut guess = String::new();
+
+    io::stdin().read_line(&mut guess)
+        .expect("Failed to read line");
+
+        println!("You guessed: {}", guess);
+}
+```
+
+In Rust variables are immutable by default. To create mutable variable you must use `mut` before variable name.
+
+The syntax `::` indicates an associated function (static function) that is used here in `String::new`() and `io:stdin()`.
+
+`&` indicates that this argument is a reference. References are immutable by default and hence `&mut` is used.
+
+`expect` is a method of `io:Result`. If the Result is error thwn `expect` will cause the program to crash and display the given message.
+
+Rust let's 'shadow' a variable name, meaning that you can instantiate a variable with an existing name. This is usually used when doing type conversion for example String -> u32.
