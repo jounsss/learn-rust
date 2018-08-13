@@ -58,3 +58,37 @@ The syntax `::` indicates an associated function (static function) that is used 
 `expect` is a method of `io:Result`. If the Result is error thwn `expect` will cause the program to crash and display the given message.
 
 Rust let's 'shadow' a variable name, meaning that you can instantiate a variable with an existing name. This is usually used when doing type conversion for example String -> u32.
+
+# 3 Common Variable Concepts
+
+## 3.1 Variables and Mutability
+
+By default Rust variables are immutable ie. they cannot be changed once a value is assigned to them.
+
+Examples:
+
+```rust
+let x = 5;
+x = 6; // throws compiler error
+```
+
+```rust
+let x = 5;
+let x = 6; // works, variable shadowing
+```
+
+```rust
+let x;
+x = 5; // works because this is the first time a value is assigned to variable
+```
+
+```rust
+let mut x = 5; // declare variable as mutable
+x = 6; // works!
+```
+
+The difference between variables and constants `const` is that variables are by default immutable but constants are always immutable. You are not allowed to use mut with constants and contants must always have type assosiated with them.
+
+```rust
+const MX_VALUE: u32 = 100_000;
+```
