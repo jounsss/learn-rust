@@ -92,3 +92,21 @@ The difference between variables and constants `const` is that variables are by 
 ```rust
 const MX_VALUE: u32 = 100_000;
 ```
+
+### 3.3 Data Types
+
+*Scalar types* respresent a single value. Rust has four primary scalar types integer, floating-point, boolean and character.
+
+**Integer** 
+
+Signed integers can store numbers in range of [-2^(n-1), 2^(n-1)-1]. So a *i8* can store values [-128, 127].
+
+Unsigned can store values from [0, 2^n-1]. So *i8* can have values [0, 255].
+
+*Compound types* can groups multiple values into a single type.
+
+**Tuple** is a collection that can contain multiple types of variables and once set cannot grow or shrink.
+
+**Array** collections on the same type of variable and fixed length.
+
+**Vector** is similar to Array but can grow or shrink in size;

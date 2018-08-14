@@ -1,0 +1,6 @@
+[package]
+name = "c3_2_data-types"
+version = "0.1.0"
+authors = ["jounsss <jouni.sahiluoto@gmail.com>"]
+
+[dependencies]
